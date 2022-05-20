@@ -1,23 +1,23 @@
 
 DEFINE MAIN %
-  # with newline
+  ! with newline
   FORMAT "Hello World" 
 
-  # without newline
+  ! without newline
   OUTPUT "Hello World"
 %
 
-# run the function main
+! run the function main
 RUN MAIN 
 
-foo = 0
-bar = 1 
+foo=0
+bar=1 
 
 WHILE foo < bar %
   FORMAT "Hello Qs-Lang"
 %
 
-test = 1
+test=1
 
 IF test == 1 %
   FORMAT "YES"

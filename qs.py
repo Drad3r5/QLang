@@ -272,7 +272,7 @@ def DoSubDef():
 
 def DoAssign(act):
     ident = TakeNextAlNum()
-    if not TakeNext(':=') or ident == "":
+    if not TakeNext('=') or ident == "":
         Error("unknown statement")
     e = Expression(act)
     if act[0] or ident not in variable:
