@@ -276,7 +276,8 @@ def DoAssign(act):
         Error("unknown statement")
     e = Expression(act)
     if act[0] or ident not in variable:
-        variable[ident] = e		# assert initialization even if block is inactive
+        # assert initialization even if block is inactive
+        variable[ident] = e
 
 
 def DoBreak(act):
@@ -286,7 +287,8 @@ def DoBreak(act):
 
 
 def DoPrint(act):
-    while True:																								# process comma-separated arguments
+    # process comma-separated arguments
+    while True:
         e = Expression(act)
         if act[0]:
             print(e[1], end="")
@@ -295,7 +297,8 @@ def DoPrint(act):
 
 
 def DoFormat(act):
-    while True:																								# process comma-separated arguments
+    # process comma-separated arguments
+    while True:
         e = Expression(act)
         if act[0]:
             print(e[1], end="\n")
