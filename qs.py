@@ -7,7 +7,7 @@ import sys
 def Look():
     # comments are entered by # and exited by \n or \0
     global pc
-    if source[pc] == '#':
+    if source[pc] == '!':
         while source[pc] != '\n' and source[pc] != '\0':
             # scan over comments here
             pc += 1
@@ -272,7 +272,7 @@ def DoSubDef():
 
 def DoAssign(act):
     ident = TakeNextAlNum()
-    if not TakeNext('=') or ident == "":
+    if not TakeNext(':=') or ident == "":
         Error("unknown statement")
     e = Expression(act)
     if act[0] or ident not in variable:
@@ -369,12 +369,14 @@ variable = {}
 if len(sys.argv) < 2:
     print('USAGE: qs.py <sourcefile>')
     sys.exit(1)
+
 try:
     f = open(sys.argv[1], 'r')																					# open source file
 except:
     print("ERROR: Can't find source file \'" + sys.argv[1] + "\'.")
     sys.exit(1)
 source = f.read() + '\0'
-f.close()																			# append a null termination
+# append a null termination
+f.close()
 
 Program()

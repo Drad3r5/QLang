@@ -1,7 +1,0 @@
-
-DEFINE MAIN
-%
-
-%
-
-RUN MAIN
