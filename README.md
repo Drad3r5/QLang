@@ -1,6 +1,8 @@
 # Qs-Lang
 Qs Programming Language written in Python
 
+
+Example:
 ```qs 
 DEFINE MAIN %
   # with newline
