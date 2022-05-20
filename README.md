@@ -55,9 +55,6 @@ it's a nice repository for those who want to dig deep to creating their own mini
 Wrapper around executing python code
 [run.sh](./run.sh)
 
-Source folder where all source codes are located
-[src/](./src/)
-
 It will be where the graphics modules will be stored
 [src/Graphics](./src/Graphics/)
   
