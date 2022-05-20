@@ -49,7 +49,8 @@ def TakeNext(c):
         return False
 
 
-def IsDigit(c): return (c >= '0' and c <= '9')									# recognizers
+# recognizers
+def IsDigit(c): return (c >= '0' and c <= '9')
 def IsAlpha(c): return ((c >= 'a' and c <= 'z') or (c >= 'A' and c <= 'Z'))
 def IsAlNum(c): return (IsDigit(c) or IsAlpha(c))
 def IsAddOp(c): return (c == '+' or c == '-')
@@ -71,7 +72,8 @@ def BooleanFactor(act):
     e = Expression(act)
     b = e[1]
     Next()
-    if (e[0] == 'i'): 																			# a single mathexpression may also serve as a boolean factor
+    # a single mathexpression may also serve as a boolean factor
+    if (e[0] == 'i'):
         if TakeString("=="):
             b = (b == MathExpression(act))
         elif TakeString("!="):
@@ -91,20 +93,23 @@ def BooleanFactor(act):
             b = (b != StringExpression(act))
         else:
             b = (b != "")
-    return act[0] and (b != inv)											# always returns False if inactive
+    # always returns False if inactive
+    return act[0] and (b != inv)
 
 
 def BooleanTerm(act):
     b = BooleanFactor(act)
     while TakeNext('&'):
-        b = b & BooleanFactor(act)		# logical and corresponds to multiplication
+        # logical and corresponds to multiplication
+        b = b & BooleanFactor(act)
     return b
 
 
 def BooleanExpression(act):
     b = BooleanTerm(act)
     while TakeNext('|'):
-        b = b | BooleanTerm(act)			# logical or corresponds to addition
+        # logical or corresponds to addition
+        b = b | BooleanTerm(act)
     return b
 
 
@@ -138,14 +143,17 @@ def MathTerm(act):
         c = Take()
         m2 = MathFactor(act)
         if c == '*':
-            m = m * m2													# multiplication
+            # multiplication
+            m = m * m2
         else:
-            m = m / m2																# division
+            # division
+            m = m / m2
     return m
 
 
 def MathExpression(act):
-    c = Next()																				# check for an optional leading sign
+    # check for an optional leading sign
+    c = Next()
     if IsAddOp(c):
         c = Take()
     m = MathTerm(act)
@@ -155,15 +163,18 @@ def MathExpression(act):
         c = Take()
         m2 = MathTerm(act)
         if c == '+':
-            m = m + m2													# addition
+            # addition
+            m = m + m2
         else:
-            m = m - m2																# subtraction
+            # subtraction
+            m = m - m2
     return m
 
 
 def String(act):
     s = ""
-    if TakeNext('\"'):																# is it a literal string?
+    # is it a literal string?
+    if TakeNext('\"'):
         while not TakeString("\""):
             if Look() == '\0':
                 Error("unexpected EOF")
@@ -171,7 +182,8 @@ def String(act):
                 s += '\n'
             else:
                 s += Take()
-    elif TakeString("str("):													# str(...)
+    # str(...)
+    elif TakeString("str("):
         s = str(MathExpression(act))
         if not TakeNext(')'):
             Error("missing ')'")
