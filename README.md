@@ -45,12 +45,13 @@ Hello Qs-Lang
 YES
 ```
 
-Credits to slu4coder for making the simple python interpreter
-[slu4coder](https://github.com/slu4coder/)
-checkout his Minimal-UART-CPU-System it's a nice repository for 
+Credits to [slu4coder](https://github.com/slu4coder/)
+for making the simple python interpreter
+
+checkout his [Minimal-UART-CPU-System](https://github.com/slu4coder/Minimal-UART-CPU-System)
+it's a nice repository for
 those who want to dig deep to creating their own minimal cpu
 I use it as a template for this language
-[Minimal-UART-CPU-System](https://github.com/slu4coder/Minimal-UART-CPU-System)
 
 Directorie's
   - Wrapper around executing python code
