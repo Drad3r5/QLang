@@ -52,11 +52,11 @@ to build this language :).
 checkout his [Minimal-UART-CPU-System](https://github.com/slu4coder/Minimal-UART-CPU-System),
 it's a nice repository for those who want to dig deep to creating their own minimal cpu
 
-[run.sh](./run.sh)
+[run.sh](./run.sh) This is the wrapper for python to run the qs.py file
 
-[src/Graphics](./src/Graphics/)
+[src/Graphics](./src/Graphics/) Store's the modules related to Graphics.
   
-[examples/](./examples/)
+[examples/](./examples/) This is where examples located
 
 Implementation
   Default: [Python](python.org)
