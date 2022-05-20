@@ -52,13 +52,10 @@ to build this language :).
 checkout his [Minimal-UART-CPU-System](https://github.com/slu4coder/Minimal-UART-CPU-System),
 it's a nice repository for those who want to dig deep to creating their own minimal cpu
 
-Wrapper around executing python code
 [run.sh](./run.sh)
 
-It will be where the graphics modules will be stored
 [src/Graphics](./src/Graphics/)
   
-Location of some example files
 [examples/](./examples/)
 
 Implementation
