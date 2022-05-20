@@ -46,24 +46,23 @@ YES
 ```
 
 Credits to [slu4coder](https://github.com/slu4coder/)
-for making the simple python interpreter
+for making the simple python interpreter I utilize it 
+to build this language :).
 
-checkout his [Minimal-UART-CPU-System](https://github.com/slu4coder/Minimal-UART-CPU-System)
-it's a nice repository for
-those who want to dig deep to creating their own minimal cpu
-I use it as a template for this language
+checkout his [Minimal-UART-CPU-System](https://github.com/slu4coder/Minimal-UART-CPU-System),
+it's a nice repository for those who want to dig deep to creating their own minimal cpu
 
 Directorie's
-  - Wrapper around executing python code
+  Wrapper around executing python code
   [run.sh](./run.sh)
 
-  - Source folder where all source codes are located
+  Source folder where all source codes are located
   [src/](./src/)
 
-  - It will be where the graphics modules will be stored
+  It will be where the graphics modules will be stored
   [src/Graphics](./src/Graphics/)
   
-  - Location of some example files
+  Location of some example files
   [examples/](./examples/)
 
 Implementation
