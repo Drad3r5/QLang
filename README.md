@@ -24,7 +24,7 @@ test = 1
 IF test == 1 %
   OUTPUT "YES"
 % 
-else %
+ELSE %
   FORMAT "NO"
 %
 ```
@@ -65,3 +65,7 @@ Implementation
 
 NotImplemented yet
   - FORMAT function needs to support "%s" and "%d" formatting
+
+if anyone wants to contribute to this project, its gladly appreciated :)
+
+anyone can pull request for any features they want to add to this language :)
