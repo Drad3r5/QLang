@@ -3,7 +3,7 @@ Qs Programming Language written in Python
 
 
 Example:
-![example.png](./example.png/)
+![example.png](./example.png)
 
 OUTPUT:
 ```qs 
