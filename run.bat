@@ -1,1 +1,1 @@
-python ./qs.py $1
+python ./qs.py %1
