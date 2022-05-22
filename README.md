@@ -1,5 +1,8 @@
 # Qs-Lang
 Qs Programming Language written in Python
+
+EXAMPLE:
+
 ![example.png](./example.png)
 
 Credits to [slu4coder](https://github.com/slu4coder/)
