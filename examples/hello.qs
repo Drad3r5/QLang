@@ -1,4 +1,5 @@
 
+! TODO: BETTER SYNTAX
 DEFINE MAIN %
   ! with newline
   FORMAT "Hello World" 
@@ -22,6 +23,6 @@ test=1
 IF test == 1 %
   FORMAT "YES"
 %
-else %
+ELSE %
   OUTPUT "NO"
 %

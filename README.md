@@ -3,31 +3,7 @@ Qs Programming Language written in Python
 
 
 Example:
-```qs 
-DEFINE MAIN %
-  # with newline
-  FORMAT "Hello World"
-  
-  # without newline
-  OUTPUT "Hello World"
-%
-
-# run the function
-RUN MAIN
-
-WHILE TRUE %
-  FORMAT "Hello Qs-Lang"
-%
-
-test = 1 
-
-IF test == 1 %
-  OUTPUT "YES"
-% 
-ELSE %
-  FORMAT "NO"
-%
-```
+![example.png](./example.png/)
 
 OUTPUT:
 ```qs 
