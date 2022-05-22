@@ -20,10 +20,3 @@ it's a nice repository for those who want to dig deep to creating their own mini
 
 Implementation
   Default: [Python](python.org)
-
-NotImplemented yet
-  - FORMAT function needs to support "%s" and "%d" formatting
-
-if anyone wants to contribute to this project, its gladly appreciated :)
-
-anyone can pull request for any features they want to add to this language :)
