@@ -14,10 +14,6 @@ RUN MAIN
 foo=0
 bar=1 
 
-WHILE foo < bar %
-  FORMAT "Hello Qs-Lang"
-%
-
 test=1
 
 IF test == 1 %

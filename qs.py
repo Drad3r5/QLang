@@ -242,7 +242,7 @@ def DoIfElse(act):
         Block([False])
     Next()
     # process else block?
-    if TakeString("else"):
+    if TakeString("ELSE"):
         if act[0] and not b:
             Block(act)
         else:
