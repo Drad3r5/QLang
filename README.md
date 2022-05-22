@@ -1,27 +1,6 @@
 # Qs-Lang
 Qs Programming Language written in Python
-
-
-Example:
 ![example.png](./example.png)
-
-OUTPUT:
-```qs 
-Hello World
-Hello World%
-
-# Looping
-Hello Qs-Lang
-Hello Qs-Lang
-Hello Qs-Lang
-Hello Qs-Lang
-Hello Qs-Lang
-Hello Qs-Lang
-Hello Qs-Lang
-...
-
-YES
-```
 
 Credits to [slu4coder](https://github.com/slu4coder/)
 for making the simple python interpreter I utilize it 
