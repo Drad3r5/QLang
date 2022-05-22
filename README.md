@@ -19,4 +19,4 @@ it's a nice repository for those who want to dig deep to creating their own mini
 [examples/](./examples/) This is where examples located
 
 Implementation
-  Default: [Python](python.org)
+  Default: [Python](https://python.org)
