@@ -235,6 +235,20 @@ def DoWhile(act):
     Block([False])
 
 
+def DoInput(act):
+    ident = TakeNextAlNum()
+    e = Expression(act)
+    while True:
+        try:
+            _in = input(e[1])
+            if _in == "EXIT":
+                exit(_in[1])
+        except KeyboardInterrupt:
+            print("\nExiting...\n")
+            exit()
+    variable[ident] = e
+
+
 def DoIfElse(act):
     b = BooleanExpression(act)
     if act[0] and b:
@@ -365,6 +379,8 @@ def Statement(act):
         DoFormat(act)
     elif TakeString("EXIT"):
         DoExit(act)
+    elif TakeString("INPUT"):
+        DoInput(act)
     elif TakeString("RETURN"):
         DoReturn(act)
     elif TakeString("IF"):

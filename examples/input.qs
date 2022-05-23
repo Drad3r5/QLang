@@ -1,0 +1,7 @@
+
+DEFINE MAIN
+%
+  INPUT ">> "
+%
+
+RUN MAIN
