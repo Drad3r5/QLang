@@ -2,6 +2,7 @@
 
 # returns the current character while skipping over comments
 import sys
+import os
 import src.Web as w
 
 
@@ -339,7 +340,9 @@ def DoExit(act):
         exit()
 
 
-def DoMkHtml():
+def DoMkTemp():
+    os.system("touch style.css")
+    os.system("touch main.js")
     with open('index.html', 'w+') as f:
         f.write("<!DOCTYPE html>\n")
         f.write("<html>\n")
@@ -369,7 +372,7 @@ def Statement(act):
     elif TakeString("WHILE"):
         DoWhile(act)
     elif TakeString("MKHTML"):
-        DoMkHtml()
+        DoMkTemp()
     elif TakeString("SERVE::INIT"):
         DoServe(act)
     elif TakeString("SERVE::RUN"):
