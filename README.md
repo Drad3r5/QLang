@@ -24,5 +24,5 @@ Implementation
 
 
 Implemented:
-  - Web Server (PS: You need to manually create a style.css, edit the index.html
-  and also manually create the main.js)
+  - Web Server (PS: You still need to for now manually create a style.css, edit the index.html
+  and also manually create the main.js :) )
