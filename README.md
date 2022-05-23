@@ -1,11 +1,11 @@
 # Qs-Lang
 Qs Programming Language written in Python
 
-EXAMPLE CODE:
-![example.png](./example.png)
-
 SERVER CODE:
 ![server.png](./server.png)
+EXAMPLE CODE:
+
+![example.png](./example.png)
 
 [run.sh](./run.sh) This is the wrapper for python to run the qs.py file
 
