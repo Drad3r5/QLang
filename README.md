@@ -3,6 +3,7 @@ Qs Programming Language written in Python
 
 EXAMPLE:
 
+![server.png](./server.png)
 ![example.png](./example.png)
 
 [run.sh](./run.sh) This is the wrapper for python to run the qs.py file
