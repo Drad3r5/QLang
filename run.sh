@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-python ./qs.py $1
+python ./ql.py $1

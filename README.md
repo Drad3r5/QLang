@@ -1,5 +1,5 @@
-# Qs-Lang
-Qs Programming Language written in Python
+# QLang
+Ql Programming Language written in Python
 
 SERVER:
 
