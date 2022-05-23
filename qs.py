@@ -101,7 +101,7 @@ def BooleanFactor(act):
 
 def BooleanTerm(act):
     b = BooleanFactor(act)
-    while TakeNext('&'):
+    while TakeString('AND'):
         # logical and corresponds to multiplication
         b = b & BooleanFactor(act)
     return b
@@ -109,7 +109,7 @@ def BooleanTerm(act):
 
 def BooleanExpression(act):
     b = BooleanTerm(act)
-    while TakeNext('|'):
+    while TakeString('OR'):
         # logical or corresponds to addition
         b = b | BooleanTerm(act)
     return b

@@ -35,10 +35,10 @@ syn region QsDescBlock start="%" end="%" fold transparent contains=QsNumber, qsF
 
 
 " Keywords
-syn keyword qsFunction DEFINE  
+syn keyword qsFunction DEFINE SERVE INPUT 
 syn keyword qsConditional IF ELSE 
 syn keyword qsRepeat  WHILE
-syn keyword qsStatement OUTPUT RUN FORMAT 
+syn keyword qsStatement OUTPUT INIT RUN FORMAT 
 syn keyword qsBuiltin BREAK EXIT 
 syn keyword qsOperator OR AND 
 
