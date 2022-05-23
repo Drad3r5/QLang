@@ -2,6 +2,7 @@
 
 # returns the current character while skipping over comments
 import sys
+import src.Web as w
 
 
 def Look():
@@ -280,6 +281,27 @@ def DoAssign(act):
         variable[ident] = e
 
 
+def DoReturn(act):
+    ident = TakeNextAlNum()
+    if ident == "":
+        return
+    elif ident == "1":
+        Error("Return value must not exceed to 1")
+    elif ident == "-1":
+        Error("Return value must not be lower than -1")
+    else:
+        return ident
+
+
+def DoSrvRun():
+    httpd.serve_forever()
+
+
+def DoServe(act):
+    global httpd
+    httpd = w.HTTPServer(("localhost", 8080), w.web_server)
+
+
 def DoBreak(act):
     if act[0]:
         # switch off execution within enclosing loop (while, ...)
@@ -309,12 +331,28 @@ def DoFormat(act):
 def DoExit(act):
     global pc
     ident = TakeNextAlNum()
-    if ident == "1":
-        raise Error("error code 1, quitting")
-    elif ident == "-1":
-        raise Error("error code -1, quitting")
-    elif ident == "":
+    if act[0] and ident == "1":
+        Error("error code 1, quitting")
+    elif act[0] and ident == "-1":
+        Error("error code -1, quitting")
+    elif act[0] and ident == "":
         exit()
+
+
+def DoMkHtml():
+    with open('index.html', 'w+') as f:
+        f.write("<!DOCTYPE html>\n")
+        f.write("<html>\n")
+        f.write("    <head>\n")
+        f.write("        <meta charset='utf-8'>\n")
+        f.write("        <title>Document</title>\n")
+        f.write("        <link rel='stylesheet' href='style.css'>\n")
+        f.write("    </head>\n")
+        f.write("    <body>\n")
+        f.write("        <h1>Hello Html</h1>\n")
+        f.write("        <script src='main.js'></script>\n")
+        f.write("    </body>\n")
+        f.write("</html>\n")
 
 
 def Statement(act):
@@ -324,10 +362,18 @@ def Statement(act):
         DoFormat(act)
     elif TakeString("EXIT"):
         DoExit(act)
+    elif TakeString("RETURN"):
+        DoReturn(act)
     elif TakeString("IF"):
         DoIfElse(act)
     elif TakeString("WHILE"):
         DoWhile(act)
+    elif TakeString("MKHTML"):
+        DoMkHtml()
+    elif TakeString("SERVE::INIT"):
+        DoServe(act)
+    elif TakeString("SERVE::RUN"):
+        DoSrvRun()
     elif TakeString("BREAK"):
         DoBreak(act)
     elif TakeString("RUN"):

@@ -13,3 +13,8 @@ EXAMPLE:
 
 Implementation
   Default: [Python](https://python.org)
+
+
+Implemented:
+  - Web Server (PS: You need to manually create a style.css, edit the index.html
+  and also manually create the main.js)

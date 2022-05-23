@@ -1,0 +1,8 @@
+
+
+DEFINE MAIN 
+%
+  MKHTML
+  SERVE::INIT
+  SERVE::RUN
+%
