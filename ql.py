@@ -9,7 +9,7 @@ import src.Web as w
 def Look():
     # comments are entered by # and exited by \n or \0
     global pc
-    if source[pc] == '!':
+    if source[pc] == '//':
         while source[pc] != '\n' and source[pc] != '\0':
             # scan over comments here
             pc += 1
@@ -404,8 +404,8 @@ def Statement(act):
 
 
 def Block(act):
-    if TakeNext("%"):
-        while not TakeNext("%"):
+    if TakeNext("{"):
+        while not TakeNext("}"):
             Block(act)
     else:
         Statement(act)
