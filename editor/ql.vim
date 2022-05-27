@@ -9,7 +9,7 @@ if exists("b:current_syntax")
 endif
 
 syn keyword qlTodo contained TODO FIXME XXX NOTE
-syn match qlComment "!.*$" contains=qlTodo
+syn match qlComment "//.*$" contains=qlTodo
 
 syn match qlNumber '\d\+' contained display
 syn match qlNumber '[-+]\d\+' contained display
@@ -31,7 +31,7 @@ syn match qlDecoratorName "@\s*\h\%(\w\|\.\)*" display contains=qlDecorator
 
 
 
-syn region qlDescBlock start="%" end="%" fold transparent contains=qlNumber, qlFunction, qlConditional, qlRepeat, qlStatement, qlBuiltin, qlOperator, qlComment 
+syn region qlDescBlock start="{" end="}" fold transparent contains=qlNumber, qlFunction, qlConditional, qlRepeat, qlStatement, qlBuiltin, qlOperator, qlComment 
 
 " Keywords
 syn keyword qlFunction DEFINE SERVE INPUT 
